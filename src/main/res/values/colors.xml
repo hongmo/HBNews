@@ -1,4 +1,8 @@
 <resources>
     <item type="drawable" name="main_background">#ffe7e7e7</item>
     <item type="drawable" name="news_list_item_background">#ffe7e7e7</item>
+    <item type="color" name="white">#ffffffff</item>
+    <item type="color" name="category_title_normal_background">#ff89ffe9</item>
+    <item type="color" name="category_title_normal_textColor">#ffadb2ad</item>
+    <item type="color" name="big_red">#ffb2103b</item>
 </resources>
