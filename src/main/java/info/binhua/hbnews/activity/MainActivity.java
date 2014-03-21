@@ -1,5 +1,6 @@
 package info.binhua.hbnews.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
@@ -15,6 +16,8 @@ import android.widget.GridView;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -54,9 +57,7 @@ public class MainActivity extends ActionBarActivity {
         category.setSelector(new ColorDrawable(Color.TRANSPARENT));
 
         int width = columnWidthDip * categories.size();
-
         LayoutParams params = new LayoutParams(width,LayoutParams.WRAP_CONTENT);
-
         category.setLayoutParams(params);
         category.setAdapter(categoryAdapter);
 
@@ -86,6 +87,32 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 categoryScrollview.fling(columnWidthDip*18);
+            }
+        });
+
+        List<HashMap<String, String>> newsItemsData = new ArrayList<HashMap<String, String>>();
+        for(int i=0; i<15; i++){
+            HashMap<String, String> hashMap = new HashMap<String, String>();
+            hashMap.put("newslist_item_title", "斌华集团于2020年8月上市");
+            hashMap.put("newslist_item_digest", "著名的高科技集团公司斌华集团将定于2014年8月8号在纳斯达克上市。。。");
+            hashMap.put("newslist_item_sources", "来自：斌华在线");
+            hashMap.put("newslist_item_time", "2014-02-18 12:22:00");
+            newsItemsData.add(hashMap);
+        }
+
+        SimpleAdapter newsItems = new SimpleAdapter(this, newsItemsData, R.layout.newslist_item,
+                new String[]{"newslist_item_title", "newslist_item_digest", "newslist_item_sources", "newslist_item_time"},
+                new int[]{R.id.newslist_item_title, R.id.newslist_item_digest, R.id.newslist_item_sources, R.id.newslist_item_time} );
+
+        //新闻列表
+        ListView newsList = (ListView)findViewById(R.id.news_list);
+        newsList.setAdapter(newsItems);
+
+        newsList.setOnItemClickListener(new ListView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, NewsDetailsActivity.class);
+                startActivity(intent);
             }
         });
     }

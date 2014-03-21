@@ -9,6 +9,32 @@
     <item type="id" name="category_layout" />
     <item type="id" name="news_list" />
     <item type="id" name="category_title" />
-
+    <item type="id" name="newslist_item_layout" />
+    <item type="id" name="newslist_item_info_layout" />
+    <item type="id" name="newslist_item_title" />
+    <item type="id" name="newslist_item_digest" />
+    <item type="id" name="newslist_item_sources" />
+    <item type="id" name="newslist_item_time" />
+    <item type="id" name="newslist_item_go_detail" />
+    <item type="id" name="newsdetails_layout" />
+    <item type="id" name="newdetails_titlebar_layout" />
+    <item type="id" name="newsdetails_titlebar_previous" />
+    <item type="id" name="newsdetail_titlebar_title" />
+    <item type="id" name="newsdetails_titlebar_next" />
+    <item type="id" name="newsdetails_titlebar_comment" />
+    <item type="id" name="news_body_layout" />
+    <item type="id" name="news_body_scrollview" />
+    <item type="id" name="news_body_title" />
+    <item type="id" name="news_body_time_source" />
+    <item type="id" name="news_body_separator_line" />
+    <item type="id" name="news_body_details_loding" />
+    <item type="id" name="news_body_details" />
+    <item type="id" name="news_reply_layout" />
+    <item type="id" name="news_reply_edit_layout" />
+    <item type="id" name="news_reply_edittext" />
+    <item type="id" name="news_reply_post" />
+    <item type="id" name="news_reply_img_layout" />
+    <item type="id" name="news_share_btn" />
+    <item type="id" name="news_collect_btn" />
 </resources>
 
